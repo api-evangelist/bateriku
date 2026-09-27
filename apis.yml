@@ -1,23 +1,52 @@
 aid: bateriku
+
 name: Bateriku
-description: 'Bateriku is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bateriku is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling. No public website or API documentation could be located for Bateriku despite attempts to locate a corporate domain, documentation portal, or developer resources. The company appears only as a listing on EquityZen, and no further online presence was discovered.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bateriku/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Finance
+- Investment
+- Marketplace
+- Secondary-Market
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/bateriku
+
+  - type: Hosts
+    url: hosts/bateriku-hosts.yml
+  - type: Vendors
+    url: vendors/bateriku-vendors.yml
+  - type: DomainSecurity
+    url: security/bateriku-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/bateriku
+
+apis: []
+x-enrichment:
+  date: '2026-09-27'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
